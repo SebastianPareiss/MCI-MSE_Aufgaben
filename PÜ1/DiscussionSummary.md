@@ -3,11 +3,11 @@
 ### Purpose of project
 
 Generating software with the goal to extract EKG monitor data, to analyse it and visual display it.
-The project should teach us how to work on a biger project. During this project our proframming skills are increased. 
+The project should teach us how to work on a bigger project. During this project our proframming skills are increased. 
 
 ### Scope of project
 
-The project consists of several different task. 
+The project consists of several different tasks. 
 
 ### Other background information
 
@@ -39,20 +39,20 @@ Aus diesem muss die Herzrate bestimmt werden.
 
 ### Assumptions and dependencies
 
-EKG example.png are assumed to be correct within a resonable margin of error                  
+EKG example.png are assumed to be correct within a resonable margin of error.                  
 
 ### Design and implementation constraints
 
 hardware constrains (number of displays)
-incase this software ever will be used in any professionell capacity the developers take no responsibility
+incase this software ever will be used in any professionell capacity the developers take no responsibility.
 
 ## Risks
 
-Possible sources of error might be errors in the data gathering process as well as analysing or visualisation errors
+Possible sources of error might be errors in the data gathering process as well as analysing or visualisation errors.
 
 ## Known future enhancements
 
-not as of now
+Not as of now
 
 ## References
 
