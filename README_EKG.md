@@ -2,7 +2,7 @@
 
 ## 1. Performance  
 
-Generating software with the goal to extract EKG monitor data, to analyse it and visual display it.
+Generating a software with the goal to extract EKG monitor data from a bicycle ergometer. The data should be analyzed and visualized
 
 ## 2. Installation 
 
@@ -10,7 +10,7 @@ Generating software with the goal to extract EKG monitor data, to analyse it and
 
   
 
-2.2 Installation Instructions 
+2.2 Installation instructions 
 
 
 
