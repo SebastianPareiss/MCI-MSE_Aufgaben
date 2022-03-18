@@ -8,11 +8,10 @@ Generating software with the goal to extract EKG monitor data, to analyse it and
 
 3.1 Installation command
 
-  On UNIX systems: install
+  
 
 3.2 Installation Instructions 
 
-  For more information about the installation process read more on Google 
 
 
 ## Usage 
