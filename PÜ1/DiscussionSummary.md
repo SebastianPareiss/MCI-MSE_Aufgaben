@@ -23,7 +23,7 @@ Input may come from: us, the developers, and our lectures. Additional help from 
 ## Project Objectives
 ### Known business rules
 
-Get paied before delivering? We finde ourselves with a lack of background information to properly adress this point.
+Get paied before delivering? We find ourselves with a lack of background information to properly adress this point.
 
 ### System information and/or diagrams
 
