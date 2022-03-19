@@ -2,7 +2,7 @@
 
 ### Purpose of project
 
-Generating software with the goal to extract EKG monitor data from a bicycle ergometer. The data should be analyzed and visualized on a display. The project should teach us how to work on a bigger project. The goal of this project is to increase our programming skills and to show us how to work on in a "programming-team". 
+Generating software with the goal to extract EKG monitor data from a bicycle ergometer. The data should be analyzed and visualized on a display. This project should teach us how to work on bigger projects furtherdown our studies. The goal of this project is to increase our programming skills and to show us how to work on in a "programming-team". 
 
 ### Scope of project
 
