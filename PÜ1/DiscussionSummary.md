@@ -31,12 +31,12 @@ Get paied before delivering? We find ourselves with a lack of background informa
 
 ### Assumptions and dependencies
 
-EKG example.png is assumed to be correct within resonable margin of error. The hardware must work as planned so the software can use the provided data. The whole analysing process depends on the functionality of the programmed software.
+EKG example.png is assumed to be correct within a resonable margin of error. The hardware must work as planned so the software can use the provided data. The whole analysing process depends on the functionality of the programmed software.
 
 ### Design and implementation constraints
 
 The hardware of the bicycle ergometer is limited, for example the number of displays to show data.
-Storage place and processing power are limited as well and shall be restrained to a reasonable level. Visual output must be interpreable by diagnostician.
+Storage place and processing power are limited as well and shall be restrained to a reasonable level. Visual output must be interpretable by a diagnostician.
 
 ## Risks
 
