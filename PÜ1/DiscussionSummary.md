@@ -28,7 +28,6 @@ Get paied before delivering? We find ourselves with a lack of background informa
 ### System information and/or diagrams
 
 ![](ekg_example.png)
-Further attached information
 
 ### Assumptions and dependencies
 
