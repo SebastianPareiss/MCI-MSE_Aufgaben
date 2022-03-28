@@ -3,17 +3,32 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Schleife um jede Person einspeichern zu können
+# (auslesen und ploten)
+
 
 # %% Öffnen der Datei und konvertieren zu numpy-Array
-file_name =  'input_data/power_data_1.txt'
-power_data_watts = open(file_name).read().split("\n")
-x = np.array(power_data_watts)
 
-# %% Erstellen des Plots
-plt.title("Line graph")
-plt.plot(x, color="red")
+#for(i = 1; i <= 3; i++) Schreibweise in Python nicht bekannt 
 
-plt.show()
+#Schleife 3 mal durchlaufen weil 3 Daten gegeben sind 
+for i in range (3):
+
+ #Daten bei durchlauf um 1 erhöhen bis bei range(3) angekommen
+ #string in python str
+  
+    d = str(i+1)
+
+#+d+ um den string anzuwenden und die Diagramme der 3 verschiedenen Daten zu erhalten
+    file_name =  'input_data/power_data_'+d+'.txt'
+    power_data_watts = open(file_name).read().split("\n")
+    x = np.array(power_data_watts)
+
+#Plot erstellen
+    plt.title("Line graph")
+    plt.plot(x, color="red")
+    plt.show()
+
+
 
 
 # %%
