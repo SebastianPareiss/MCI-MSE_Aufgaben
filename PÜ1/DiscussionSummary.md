@@ -33,6 +33,20 @@ Get paied before delivering? We find ourselves with a lack of background informa
 
 EKG example.png is assumed to be correct within a resonable margin of error. The hardware must work as planned so the software can use the provided data. The whole analysing process depends on the functionality of the programmed software.
 
+Task 2:
+
+Information in the data:
+
+There are 3 different data sets for each test person. On the one hand, a large amount of ECG data from the test subjects are shown.
+The next data set shows the performance over time. The test lasted 180s. The fluctuations in the performance provided by the test persons are therefore shown.
+A distinction is made between personal description, year of birth, duration and difficulty of the test.
+
+Temporal resolution of the data and duration of the test:
+
+The performance test has a duration of 180s, i.e. 3 minutes.
+The data indicate the performance achieved in every single second of the test.
+The data will probably be evaluated later on based on the personal data of the test persons (age).
+
 ### Design and implementation constraints
 
 The hardware of the bicycle ergometer is limited, for example the number of displays to show data.
