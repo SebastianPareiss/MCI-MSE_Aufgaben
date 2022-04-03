@@ -10,7 +10,7 @@ list_of_new_tests = []
 import os
 import pandas as pd
 
-#Erstellen des os.paths 
+#Erstellen des os.path 
 #folder mit den input-Daten wird erstellt 
 folder_current = os.path.dirname(__file__) 
 folder_input_data = os.path.join(folder_current, 'input_data')
