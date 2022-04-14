@@ -1,8 +1,21 @@
 {
+<<<<<<< HEAD
     "User ID": "2",
     "Reason for test termation": "",
     "Average Heart Rate": 133.33333333333334,
     "Maximum Heart Rate": 186.0,
     "Test Length (s)": 180,
     "Test Power (W)": 300
+=======
+    "Test ID": "2",
+    "Test": {
+        "User ID": "2",
+        "Reason for test termation": "",
+        "Average Heart Rate": 127.33333333333333,
+        "Maximum Heart Rate": 192.0,
+        "Test Length (s)": 180,
+        "Test Power (W)": 100,
+        "Path to Graph": "result_data/figure_2.png"
+    }
+>>>>>>> d50578b3b072e0c874928b5c31847623515719ec
 }
