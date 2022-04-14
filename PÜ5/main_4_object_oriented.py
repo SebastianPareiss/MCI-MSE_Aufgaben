@@ -70,10 +70,7 @@ class Test:
     - average_hr_test: int
     - duration_test_min: int
     - number_of_heartbeats: int
-<<<<<<< HEAD
     - variance: float
-=======
->>>>>>> d50578b3b072e0c874928b5c31847623515719ec
 
 
     """
@@ -111,14 +108,11 @@ class Test:
         
         self.maximum_hr = self.hr_peaks['average_HR_10s'].max()
 
-<<<<<<< HEAD
-        ## Calculate variance Aufgabe 4-2
+        ## Calculate variance Aufgabe 4-2 (PÜ5)
         # source to calculate variance: https://de.acervolima.com/python-statistiken-varianz/
 
         self.hr_variance = stats.variance(self.ecg_data["ECG"])
 
-=======
->>>>>>> d50578b3b072e0c874928b5c31847623515719ec
         #self.peaks['average_HR_10s'].plot()
 
     def evaluate_termination(self):
@@ -152,11 +146,8 @@ class Test:
         print("Maximum HR was: " + str(self.maximum_hr))
         print("Was test terminated because exceeding HR: " + str(self.terminated))
         print("Was test terminated because for other reasons: " + str(self.manual_termination))
-<<<<<<< HEAD
         print("Average heart rate: " + str(self.average_hr_test)) #Aufgabe 4-2
         print("Heart rate variance: " + str(self.hr_variance)) #Aufgabe 4-2
-=======
->>>>>>> d50578b3b072e0c874928b5c31847623515719ec
 
         print("________________")
         print(" \n")
@@ -218,10 +209,7 @@ list_of_power_data = []
 import os
 from re import I
 import pandas as pd
-<<<<<<< HEAD
 import statistics as stats #to calculate variance (4-2)
-=======
->>>>>>> d50578b3b072e0c874928b5c31847623515719ec
 
 folder_current = os.path.dirname(__file__) 
 folder_input_data = os.path.join(folder_current, 'input_data')
@@ -244,7 +232,6 @@ iterator = 0                                        # Zähler, der die gefundene
 
 for test in list_of_new_tests:                      # Alle Tests werden nacheinander durchlaufen
     test.create_hr_data()                           # Erstelle Herzraten aus den EKG-Daten
-<<<<<<< HEAD
     test.add_subject(list_of_subjects[iterator]) 
     test.evaluate_termination()
     test.add_power_data(list_of_power_data[iterator])
@@ -262,13 +249,3 @@ for test in list_of_new_tests:                      # Alle Tests werden nacheina
 # %%
 
 # %%
-=======
-    test.add_subject(list_of_subjects[iterator])    # Fügt einem Test die passenden Versuchspersonen hinzu
-
-    """
-    Fügen Sie hier den Programmablauf ein, indem Sie die Methoden und Klassen von oben nutzen
-    """
-
-    iterator = iterator + 1
-
->>>>>>> d50578b3b072e0c874928b5c31847623515719ec
