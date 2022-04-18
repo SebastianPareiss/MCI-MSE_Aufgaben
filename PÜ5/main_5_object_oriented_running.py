@@ -1,10 +1,13 @@
 # %%
 # Import external packages
+import sys
 
 import pandas as pd
 import neurokit2 as nk
 import json
+import matplotlib.pyplot as matplot
 import logging as log
+
 #creating and configuring logger
 # %%
 # Definition of Classes
@@ -91,6 +94,7 @@ class Test:
         - ecg_data: pandas dataframe
         - manual_termination: bool
         """
+        self.figure_path = None # Neues Attribut hinzugefügt, um den Figure-Pfad zu speichern
         self.subject_id = file_name.split(".")[0][-1]
         self.ecg_data = pd.read_csv(file_name)
         self.manual_termination = False
@@ -188,14 +192,33 @@ class Test:
         self.plot_data = self.plot_data.reset_index(drop=True)
 
         self.plot_data["Power (Watt)"] = pd.to_numeric(self.power_data.power_data_watts)
-        self.plot_data.plot()
+        
+        #self.plot_data.plot() auskommentiert, da später l208 gespeichert
 
+        # Creating figure for each test object
+        matplot.figure(self.subject_id)
+
+        # Plot dataset
+        matplot.plot(self.plot_data)
+
+        # Plot description
+        matplot.xlabel("time in [s]") # Set as Time in s
+        matplot.title("Heartrate history subject " + str(self.subject_id)) # Set title as heartrate by subject
+        matplot.legend(["Heart Rate", "Power (Watt)"]) # Heart Rate and Power (Watt)
+
+        # Saving the figure to result_data as a png
+        figure_path = 'result_data/plot_figure_' + str(self.subject_id) + '.png'
+        self.figure_path = figure_path
+        matplot.savefig(figure_path)
 
     def save_data(self):
         """
         Store the test data in a JSON file
         """
-        __data = {"User ID": self.subject_id, "Reason for test termation": self.manual_termination, "Average Heart Rate": self.average_hr_test, "Maximum Heart Rate": self.maximum_hr, "Test Length (s)": self.power_data.duration_s, "Test Power (W)": self.subject.test_power_w}
+
+        test_id = "Test " + self.subject_id
+        # erstellen key, weisen variable zu, + id von subject
+        __data = {test_id: {"User ID": self.subject_id, "Reason for test termination": self.manual_termination, "Average Heart Rate": self.average_hr_test, "Maximum Heart Rate": self.maximum_hr, "Test Length (s)": self.power_data.duration_s, "Test Power (W)": self.subject.test_power_w}, "Path": self.figure_path}
 
         __folder_current = os.path.dirname(__file__)
         __folder_input_data = os.path.join(__folder_current, 'result_data')
@@ -206,7 +229,24 @@ class Test:
         with open(__results_file, 'w', encoding='utf-8') as f:
             json.dump(__data, f, ensure_ascii=False, indent=4)
 
+    def save_ppfad(self):
+        # alternative methode + pfad für fig
 
+        test_id = "Test " + self.subject_id
+        # erstellen key, weisen variable zu, + id von subject
+        __data = {test_id: {"User ID": self.subject_id, "Reason for test termination": self.manual_termination,
+                            "Average Heart Rate": self.average_hr_test, "Maximum Heart Rate": self.maximum_hr,
+                            "Test Length (s)": self.power_data.duration_s, "Test Power (W)": self.subject.test_power_w},
+                            "Path": "to do"}
+
+        __folder_current = os.path.dirname(__file__)
+        __folder_input_data = os.path.join(__folder_current, 'result_data')
+
+        __file_name = 'result_data_subject' + str(self.subject_id) + '.json'
+        __results_file = os.path.join(__folder_input_data, __file_name)
+
+        with open(__results_file, 'w', encoding='utf-8') as f:
+            json.dump(__data, f, ensure_ascii=False, indent=4)
 
 
 # %% Eigentlich Ablauf der Event-Pipeline
